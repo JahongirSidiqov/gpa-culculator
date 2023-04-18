@@ -1,0 +1,9 @@
+
+{% extends 'home.html' %}
+
+{% block content %}
+<h1>Sizning GPA bahoyingiz!!!</h1>
+<h2 style="color:red;">{{ shortcode | safe }}</h2>
+<h3>Xalqaro birlikda:   {{ gpa_4 | safe }}</h3>
+<h3>Foyizda:   {{ gpa_100 | safe }} %</h3>
+{% endblock %}

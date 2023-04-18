@@ -1,0 +1,11 @@
+{% extends 'home.html' %}
+
+{% block content %}
+     <h1>{% block title %} Statistika {% endblock %}</h1>
+    <h2>Hisob: {{ calculus |safe }}</h2>
+    <h2>Fizika: {{ fizika |safe }}</h2>
+    <h2>Falsafa: {{ falsafa |safe }}</h2>
+    <h2>Akademik nutq: {{ akademik_nutq |safe }}</h2>
+    <h2>Ingilis tili: {{ english|safe }}</h2>
+    <h2>Dasturlash: {{ dasturlash |safe }}</h2>
+{% endblock %}

@@ -1,0 +1,109 @@
+label {
+            color:red;
+            font-size: 150%;
+        }
+body {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+}
+.button , .dark {
+  background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.dark {
+position: fixed;
+right:15px;
+top:13px;
+}
+.nav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.dark-mode {
+
+  background-color: #ffcccc;
+  color: black;
+}
+
+select{
+    width: 10%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border: 1px solid rgb(41, 18, 18);
+}
+select>option{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    background-color: rgb(247, 247, 247);
+    background-image: none;
+    font-size: 18px;
+    height: 50px;
+    padding: 15px;
+    border: 1px solid rgb(41, 18, 18);
+}
+table {
+ margin-left: auto;
+  margin-right: auto;
+}
+th, td {
+  text-align: left;
+  padding: 5px;
+}
+html, body, div, p, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+/* This class is applied to the containing div <div class="nav"> and is used to set the background color and height of the navbar */
+.nav {
+  background: #000;
+  height: 60px; /* set same as height & line-height below */
+}
+
+/* This rule centers the nav items verticaly in the bar with the height and line height properties. Spacing between the nav items is controlled by setting right and left padding.  */
+.nav li {
+  display: inline-block;
+  list-style: none;
+  height: 60px; /* should be the same as line-height */
+  line-height: 60px; /* should be the same as height */
+  padding: 0 40px; /* "0" sets top and bottom padding to none */
+}
+
+/* :hover allows you change the background color of the nav items when you mouse over them. Play around with the transition value to change the speed of the hover transition. */
+.nav li:hover {
+  background: red;
+  transition: background .3s;
+}
+
+/* This rule is applied to the link <a> tag. It lets you turn off the link underline and set the link text color. */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>{% block title %} {% endblock %}GPA CULCULETOR</title>
+</head>
+<body>
+
+
+
+    <div class="nav">
+  <ul>
+    <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+    <li><a href="{{ url_for('statistic') }}" class="nav-link">Statistika</a></li>
+    <li><a href="{{ url_for('about') }}" class="nav-link">Biz bilan bog'lanish</a></li>
+  </ul>
+        <button class="dark" onclick="myFunction()">TUN KUN</button>
+    </div>
+    <h2 style="text-align: center;"></h2><br>
+    <h3 style="text-align: center;">GPA BAHOYINGIZNI HISOBLANG!</h3>
+
+    <p style="text-align: center;">USHBU WEB SAHIFA ORQALI SIZ O'Z GPA(GRADE POINT AVERAGE) HISOBLAY OLASIZ. <br> (hozirda web sahisa faqatgina TATU talabalarining 1-kursi 1-senestiri uchun mo'ljalangan)</p>
+    <div style="text-align: center;">
+        <form action="gpa" method="POST">
+            <table>
+                <tr>
+                    <td><label for="culculs">Hisob</label></td>
+                    <td>
+                        <select name="culculs" id="culculs" required>
+                            <option value="0">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fizika">Fizika</label></td>
+                    <td>
+                        <select name="fizika" id="fizika">
+                <option value="0">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="programming">Darturlash</label></td>
+                    <td><select name="eprogramming" id="programming">
+                <option value="0">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></td>
+                </tr>
+                <tr>
+                    <td><label for="english">Ingilis tili</label></td>
+                    <td>
+                        <select name="english" id="english">
+                <option value="0">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="philosophy">Falsafa</label></td>
+                    <td>
+                        <select name="philosophy" id="philosophy">
+                <option value="0">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="as">Akadememik nutq</label></td>
+                    <td>
+                        <select name="as" id="as">
+                <option value="0">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+                    </td>
+                </tr>
+
+            </table>
+            <button class="button" type="submit">Hisoblash</button>
+        </form>
+    </div>
+    <div class="content" style="text-align: center;">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</body>
+</html>
